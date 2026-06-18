@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuadrante Horario</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            border: 1px solid #ddd;
+        }
+
+        td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:hover {
+            background-color: #f0f0f0;
+            transition: background-color 0.2s ease;
+        }
+
+        .horario-completo {
+            background-color: #e8f5e9;
+            font-weight: 500;
+        }
+
+        .horario-partido {
+            background-color: #fff3e0;
+            font-weight: 500;
+        }
+
+        .horario-reducido {
+            background-color: #f3e5f5;
+            font-weight: 500;
+        }
+
+        .legend {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .legend-box {
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid #999;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📅 Cuadrante Horario</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Horario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>ADRIAN INIESTA PUNZANO</td>
+                    <td class="horario-completo">7:00 - 15:00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Adrián Torres Zarrías</td>
+                    <td class="horario-completo">7:00 - 15:00</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Antonio Escalzo Morales</td>
+                    <td class="horario-partido">8:00 - 14:00 / 15:00 - 17:30</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Antonio Ramón Fuentes Medina</td>
+                    <td class="horario-completo">7:00 - 15:00</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Antonio Ruíz Perete</td>
+                    <td class="horario-completo">7:00 - 15:00</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Cristóbal Rodríguez Campos</td>
+                    <td class="horario-completo">7:00 - 15:00</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Fabio Gutiérrez Basante</td>
+                    <td class="horario-completo">7:00 - 15:00</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Francisco Javier Cárdenas Moga</td>
+                    <td class="horario-completo">7:00 - 15:00</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Francisco Ordoñez Perabá</td>
+                    <td class="horario-partido">8:00 - 14:00 / 15:00 - 17:30</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Francisco Rodríguez Lendínez</td>
+                    <td class="horario-completo">7:00 - 15:00</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Héctor López Ramírez</td>
+                    <td class="horario-completo">7:00 - 15:00</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Javier Galera Andújar</td>
+                    <td class="horario-completo">7:00 - 15:00</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Jesus Montilla Hermoso</td>
+                    <td class="horario-completo">7:00 - 15:00</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Juan José Borrás Ferrete</td>
+                    <td class="horario-completo">7:00 - 15:00</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Lourdes Fuentes Buendía</td>
+                    <td class="horario-partido">8:00 - 14:00 / 15:00 - 17:30</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Luis Miguel Colmenero Cobo</td>
+                    <td class="horario-completo">7:00 - 15:00</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Manuel Martín Martínez</td>
+                    <td class="horario-completo">7:00 - 15:00</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Manuel Peinado García</td>
+                    <td class="horario-reducido">9:00 - 14:00</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Tomás García</td>
+                    <td class="horario-completo">7:00 - 15:00</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Victoria Romero Sabalete</td>
+                    <td class="horario-partido">8:00 - 14:00 / 15:00 - 17:30</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box" style="background-color: #e8f5e9;"></div>
+                <span>Horario Completo: 7:00 - 15:00 (8 horas)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background-color: #fff3e0;"></div>
+                <span>Horario Partido: 8:00 - 14:00 / 15:00 - 17:30 (8.5 horas)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background-color: #f3e5f5;"></div>
+                <span>Horario Reducido: 9:00 - 14:00 (5 horas)</span>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">20</div>
+                <div class="stat-label">Trabajadores Totales</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">16</div>
+                <div class="stat-label">Horario 7:00 - 15:00</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4</div>
+                <div class="stat-label">Horario 8:00 - 14:00 / 15:00 - 17:30</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">1</div>
+                <div class="stat-label">Horario 9:00 - 14:00</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
